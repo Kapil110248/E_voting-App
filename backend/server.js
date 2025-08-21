@@ -25,7 +25,7 @@ require("./config/db")();
 // 🔀 Routes
 app.use("/api/admin", require("./routes/adminRoutes"));
 app.use("/api/voter", require("./routes/voterRoutes")); // ✅ This must point to voterRoutes.js
-app.use("/api/vote", require("./routes/voteRoutes"));   // Optional
+app.use("/api/vote", require("./routes/voteRoutes")); // Optional
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`🚀 Server running on ${PORT}`));
